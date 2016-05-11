@@ -1,8 +1,4 @@
 dist/**
 node_modules
-scss/**
 **/*.gz
-gulpfile.js
-package.json
-static/js/myjs.js
-static/css/styles.css
+
