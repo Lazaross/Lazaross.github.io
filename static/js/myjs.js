@@ -44,7 +44,7 @@ $(document).ready(function () {
 
     $("div#makeMeScrollable").smoothDivScroll({
         autoScrollingMode: "always",
-        autoScrollingInterval: 100,
+        autoScrollingInterval: 50,
         autoScrollingStep: 1
     });
 });
