@@ -424,19 +424,17 @@ body{
 		color: #f1f1f1;
 		background-color:#121212;
 		border-radius:4px;
-
-		#middle-part-footer{
-
-			.well{
-				margin-top: 8.5%;
-				color: #383838;
-				background-color: #121212;
-				border-color: rgba(53, 53, 53, 0.53);
-				font-size: 60px;
-				text-align: center;
-			}
+		.well {
+			background-color: #121212;
 		}
 
+		h3{
+			margin-top: 20px;
+			margin-bottom: 25px;
+		}
+		#left-part-footer {
+			font-size: 36px;
+		}
 		#right-part-footer{
 			font-stretch: expanded;
 			font-size: 18px;
