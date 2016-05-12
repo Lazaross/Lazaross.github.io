@@ -6,37 +6,10 @@ window.mobilecheck = function() {
   return check;
 }
 
-//Thumbnails Hover
-$(function() {
-    $(".product-container").on(
-        "transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd",
-        function() {
-            $(this).data("transitioned", true);  // Transition has ended.
-        }
-    );
-    $(".product-container a").click(function (e) {
-        console.log("click the a");
-        console.log($(this).parent(".product-container"));
-        // console.log($(this).find('.thumbnail-hover'));
-        // gia na mpoume pio mesa se ena element pou exoume epileksei me to this
-        // kanoume find kai psaxnoume ta paidia tou eite me class,id,ktlp
-        // eite me tin thesi pou exei to paidi sto NodeList;
-        if (!$(this).parent(".product-container").data("transitioned")){
-           // e.preventDefault(); //TODO CHECK IF THIS WORKS
-        }
-        
-        // $(this).find('.thumbnail-hover').stop().animate({
-        //     opacity: .7
-        // }, "slow");
-        // $(this).addClass('hovered');
-    });
-});
-
 //Epikoinwnia scroll
 $(function(){
     $("#btn-tel").click(function(e){
-        console.log($(document).height());
-        e.preventDefault();
+                e.preventDefault();
         //iparxei scrollTop() ki oxi scrollBottom imarton...
         $("html,body").animate({scrollTop:$(document).height()}, 1500);
     });
@@ -44,17 +17,13 @@ $(function(){
 
 //Initialize to SmootDivScroll plug-in me autoscrolling function
 $(document).ready(function () {
-    console.log("document ready with theWindow.height() = ", $(window).height());
-    console.log("the orientation of the device is now " + screen.orientation.angle);
-    var theWindow = $(window);
+            var theWindow = $(window);
     var theWindowHeight = theWindow.height();
     var theWindowWidth = theWindow.width();
     var isMobile = window.mobilecheck();
     if (isMobile) {
-        console.log("isMobile = true");
-        window.addEventListener("orientationchange", function() {
-            console.log("the orientation of the device is now " + screen.orientation.angle);
-            resizeBg(true, (screen.orientation.angle && screen.orientation.angle == 90), theWindowHeight);
+                window.addEventListener("orientationchange", function() {
+                        resizeBg(true, (screen.orientation.angle && screen.orientation.angle == 90), theWindowHeight);
         });
     }
     resizeBg(isMobile, (screen.orientation.angle && screen.orientation.angle == 90), theWindowHeight);
@@ -81,7 +50,6 @@ $(document).ready(function () {
 });
 
 function resizeBg(isMobile, isLandscape, varHeight) {
-    console.log("run resizeBg with varHeight = "+varHeight + " and isLandscape = " + isLandscape);
     if (isMobile) {
         if (!isLandscape) {
             $('#content').css({'height': varHeight + 'px'});
